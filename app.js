@@ -21,8 +21,9 @@ function convertToWord(letter) {
 }
 
 function win(userChoice, computerChoice) {
-    const smallUserWord = "you".fontsize(3).sup();
-    const smallCompWord = "computer".fontsize(3).sup();
+    const smallUserWord = '<sup style="font-size: 0.6em;">you</sup>';
+    const smallCompWord = '<sup style="font-size: 0.6em;">computer</sup>';
+
     const userChoice_div = document.getElementById(userChoice);
     userScore++;
     userScore_span.innerHTML = userScore;
@@ -33,8 +34,8 @@ function win(userChoice, computerChoice) {
 }
 
 function lose(userChoice, computerChoice) {
-    const smallUserWord = "you".fontsize(3).sup();
-    const smallCompWord = "computer".fontsize(3).sup();
+    const smallUserWord = '<sup style="font-size: 0.6em;">you</sup>';
+    const smallCompWord = '<sup style="font-size: 0.6em;">computer</sup>';
     const userChoice_div = document.getElementById(userChoice);
     computerScore++;
     userScore_span.innerHTML = userScore;
@@ -45,8 +46,8 @@ function lose(userChoice, computerChoice) {
 }
 
 function draw(userChoice, computerChoice) {
-    const smallUserWord = "you".fontsize(3).sup();
-    const smallCompWord = "computer".fontsize(3).sup();
+    const smallUserWord = '<sup style="font-size: 0.6em;">you</sup>';
+    const smallCompWord = '<sup style="font-size: 0.6em;">computer</sup>';
     const userChoice_div = document.getElementById(userChoice);
     result_p.innerHTML = `${convertToWord(userChoice)}${smallUserWord} equals ${convertToWord(computerChoice)}${smallCompWord}.  It's a draw.`
     userChoice_div.classList.add('gray-glow');
